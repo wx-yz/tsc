@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "de0257e2-11e9-4612-9387-d7d62cce9f74",
+		"name": "TSC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TestTransform - JSON to JSON",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"schemaType\": \"XML\",\n    \"transformType\": \"native\",\n    \"validationScheme\": false,\n    \"schemaDefinition\": \"\",\n    \"mapping\": \"{% for item in Root %}\\n{{item.FirstName}}, {{item.LastName}}\\n{% endfor %}\",\n    \"payload\": \"<Root>\\n    <Person>\\n        <FirstName>John</FirstName>\\n        <LastName>Doe</LastName>\\n    </Person>\\n    <Person>\\n        <FirstName>Mary</FirstName>\\n        <LastName>Jane</LastName>\\n    </Person>\\n</Root>\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/tsc/testTransform",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"tsc",
+						"testTransform"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestTransform - JSON to XML",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"schemaType\": \"XML\",\n    \"transformType\": \"native\",\n    \"validationScheme\": false,\n    \"schemaDefinition\": \"\",\n    \"mapping\": \"{% for item in Root %}\\n{{item.FirstName}}, {{item.LastName}}\\n{% endfor %}\",\n    \"payload\": \"<Root>\\n    <Person>\\n        <FirstName>John</FirstName>\\n        <LastName>Doe</LastName>\\n    </Person>\\n    <Person>\\n        <FirstName>Mary</FirstName>\\n        <LastName>Jane</LastName>\\n    </Person>\\n</Root>\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/tsc/testTransform",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"tsc",
+						"testTransform"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestTransform - XML to Flatfile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"schemaType\": \"JSON\",\n    \"transformType\": \"LIQUID\",\n    \"validationScheme\": false,\n    \"schemaDefinition\": \"\",\n    \"mapping\": \"{{ \\\"Ground control to Major Tom.\\\" | split: \\\" \\\" | first }}\",\n    \"payload\": \"{\\\"FirstName\\\" : \\\"Kamlesh\\\",\\\"LastName\\\" : \\\"Kumar\\\",\\\"Company\\\" : \\\"Microsoft\\\",   \\\"department\\\" : \\\"Interface Technology\\\",   \\\"Work\\\" : [{\\\"skil\\\" : \\\"BizTalk Server\\\",\\\"Mark\\\" : 95},{\\\"skil\\\" : \\\"Logic Apps\\\",\\\"Mark\\\" : 95},{\\\"skil\\\" : \\\"Azure\\\",\\\"Mark\\\" : 85},{\\\"skil\\\" : \\\"OMS\\\",\\\"Mark\\\" : 80},{\\\"skil\\\" : \\\"Share Points\\\",\\\"Mark\\\" : 70},{\\\"skil\\\" : \\\"C Sharp\\\",\\\"Mark\\\" : 95},{\\\"skil\\\" : \\\"SQL Server\\\",\\\"Mark\\\" : 95}]}  \"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/tsc/testTransform",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"tsc",
+						"testTransform"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllSchemas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/tsc/getAllSchemas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"tsc",
+						"getAllSchemas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSchemaVersions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/tsc/getSchemaVersions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"tsc",
+						"getSchemaVersions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllMappings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/tsc/getAllMappings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"tsc",
+						"getAllMappings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

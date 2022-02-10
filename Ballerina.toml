@@ -1,0 +1,58 @@
+[package]
+distribution = "2201.0.0"
+
+[build-options]
+observabilityIncluded = true
+
+[[platform.java11.dependency]]
+groupId = "nl.big-o"
+artifactId = "liqp"
+version = "0.8.2"
+
+# transitive dependency of nl.big-o:liqp:0.8.2
+[[platform.java11.dependency]]
+groupId = "org.antlr"
+artifactId = "antlr4-runtime"
+version = "4.7.2"
+
+# transitive dependency of nl.big-o:liqp:0.8.2
+[[platform.java11.dependency]]
+groupId = "com.fasterxml.jackson.core"
+artifactId = "jackson-annotations"
+version = "2.12.1"
+
+# transitive dependency of nl.big-o:liqp:0.8.2
+[[platform.java11.dependency]]
+groupId = "com.fasterxml.jackson.core"
+artifactId = "jackson-core"
+version = "2.12.1"
+
+# transitive dependency of nl.big-o:liqp:0.8.2
+[[platform.java11.dependency]]
+groupId = "com.fasterxml.jackson.core"
+artifactId = "jackson-databind"
+version = "2.12.1"
+
+# transitive dependency of nl.big-o:liqp:0.8.2
+[[platform.java11.dependency]]
+groupId = "com.fasterxml.jackson.datatype"
+artifactId = "jackson-datatype-jsr310"
+version = "2.12.1"
+
+# transitive dependency of nl.big-o:liqp:0.8.2
+[[platform.java11.dependency]]
+groupId = "org.jsoup"
+artifactId = "jsoup"
+version = "1.14.2"
+
+# transitive dependency of nl.big-o:liqp:0.8.2
+[[platform.java11.dependency]]
+groupId = "ua.co.k"
+artifactId = "strftime4j"
+version = "1.0.5"
+
+[[platform.java11.dependency]]
+groupId = "mysql"
+artifactId = "mysql-connector-java"
+version = "8.0.28"
+path = "/home/wxyz/Downloads/mysql-connector-java-8.0.28/mysql-connector-java-8.0.28.jar"
