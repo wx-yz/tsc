@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "de0257e2-11e9-4612-9387-d7d62cce9f74",
+		"_postman_id": "70ee568b-dd95-4059-a90a-69ab5d2352bf",
 		"name": "TSC",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -18,7 +18,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"schemaType\": \"XML\",\n    \"transformType\": \"native\",\n    \"validationScheme\": false,\n    \"schemaDefinition\": \"\",\n    \"mapping\": \"{% for item in Root %}\\n{{item.FirstName}}, {{item.LastName}}\\n{% endfor %}\",\n    \"payload\": \"<Root>\\n    <Person>\\n        <FirstName>John</FirstName>\\n        <LastName>Doe</LastName>\\n    </Person>\\n    <Person>\\n        <FirstName>Mary</FirstName>\\n        <LastName>Jane</LastName>\\n    </Person>\\n</Root>\"\n}",
+					"raw": "{\n    \"schemaType\": \"JSON\",\n    \"transformType\": \"native\",\n    \"validationScheme\": false,\n    \"schemaDefinition\": \"\",\n    \"mapping\": \"{ \\\"names\\\": [{% for item in Root.Person %} \\\"{{item.FirstName}}, {{item.LastName}}\\\", {% endfor %} ] }\",\n    \"payload\": \"{\\\"Root\\\":{\\\"Person\\\":[{\\\"FirstName\\\":\\\"John\\\",\\\"LastName\\\":\\\"Doe\\\"},{\\\"FirstName\\\":\\\"Mary\\\",\\\"LastName\\\":\\\"Jane\\\"}]}}\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -53,7 +53,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"schemaType\": \"XML\",\n    \"transformType\": \"native\",\n    \"validationScheme\": false,\n    \"schemaDefinition\": \"\",\n    \"mapping\": \"{% for item in Root %}\\n{{item.FirstName}}, {{item.LastName}}\\n{% endfor %}\",\n    \"payload\": \"<Root>\\n    <Person>\\n        <FirstName>John</FirstName>\\n        <LastName>Doe</LastName>\\n    </Person>\\n    <Person>\\n        <FirstName>Mary</FirstName>\\n        <LastName>Jane</LastName>\\n    </Person>\\n</Root>\"\n}",
+					"raw": "{\n    \"schemaType\": \"XML\",\n    \"transformType\": \"native\",\n    \"validationScheme\": false,\n    \"schemaDefinition\": \"\",\n    \"mapping\": \"<Emp><FNAME>{{FirstName}}</FNAME><COMPANY>{{Company}}</COMPANY></Emp>\",\n    \"payload\": \"{\\\"FirstName\\\":\\\"Kamlesh\\\",\\\"LastName\\\":\\\"Kumar\\\",\\\"Company\\\":\\\"Microsoft\\\",\\\"department\\\":\\\"Interface Technology\\\",\\\"Work\\\":[{\\\"skil\\\":\\\"BizTalk Server\\\",\\\"Mark\\\":95},{\\\"skil\\\":\\\"Logic Apps\\\",\\\"Mark\\\":95},{\\\"skil\\\":\\\"Azure\\\",\\\"Mark\\\":85},{\\\"skil\\\":\\\"OMS\\\",\\\"Mark\\\":80},{\\\"skil\\\":\\\"Share Points\\\",\\\"Mark\\\":70},{\\\"skil\\\":\\\"C Sharp\\\",\\\"Mark\\\":95},{\\\"skil\\\":\\\"SQL Server\\\",\\\"Mark\\\":95}]}\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
